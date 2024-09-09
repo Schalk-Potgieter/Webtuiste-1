@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rtt Pat 2024 Schalk Potgieter</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style>
+    body {
+     font-family: 'roboto' , sans-serif;
+      color: #6B8E23; 
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-image: url('backg.jpg'); 
+      background-attachment: fixed;
+      background-size: cover; 
+      background-repeat: no-repeat;
+    }
+
+    .top-bar {
+      background-color: black; 
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 3px solid black; 
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+    }
+
+    .btn {
+      background-color: black;
+      color: white;
+      border: solid 2px black;
+      padding: 12px 22px;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      font-style: bold;
+    }
+
+    .btn:hover {
+      background-color: #C1FF72;
+      color: black;
+    }
+
+   .head-box {
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  height: 100vh; 
+  width: 10000px;
+  max-width: 100%;
+  color: white;
+  background-image: url('1.png');
+  background-size: cover; 
+  background-position: center; 
+}
+
+
+	.head-box2 { 
+	text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  height: 700px; 
+  width: 1000px;
+  max-width: 80%;
+  color: white;
+  background-image: url('in.jpg');
+  background-size: cover; 
+  background-position: center; 
+  }
+  
+	.text-box {
+      background-color: black;
+      padding: 3rem;
+      border-radius: 8px;
+      text-align: center;
+      display: inline-block;
+      vertical-align: top;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border: 2px solid black; 
+      transition: transform 0.2s ease-in-out;
+      position: relative;
+      height: 100%;
+      max-height: 1200px;
+      max-width: 900px;
+      width: 100%;
+      color: white;
+	  text-align: left;
+	
+	  }
+
+    .page {
+      padding: 20px;
+      height: calc(100vh - 160px); 
+      display: none; 
+      justify-content: center;
+      align-items: flex-start;
+      margin-top: 80px;
+    }
+
+    .page.active {
+      display: flex; 
+    }
+
+    .text-box img {
+      width: 250px;
+      height: 250px;
+      display: block;
+      margin: 15px auto; 
+      border: solid black;
+      border-width: 1px;
+    }
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.slideshow-container {
+  position: relative;
+  height: 100%;
+  max-height: 1200px;
+  max-width: 1300px;
+  width: 100%;
+  margin-top: 0;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  background-color: black;
+  padding: 20px;
+}
+
+.mySlides {
+  display: none;
+  padding: 20px;
+  text-align: center;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: #C1FF72;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  color: White;
+}
+
+
+
+
+    h1 {
+      font-size: 50px;
+      margin: 15px;
+	  text-align: center;
+	  color: #C1FF72;
+    font-family: 'roboto', sans-serif;
+}
+
+    p {
+		font-size: 21px;
+		margin: 10px;
+		font-family: 'roboto', sans-serif;	
+		position: relative;
+    }
+
+    li {
+      font-size: 20px;
+      margin: 15px;
+      position: relative;
+    }
+	   
+        
+      .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+        table {
+            font-size: 20px;
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: white;
+            padding: 2rem;
+            border-radius: 8px;
+            text-align: left;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border: 2px solid white; 
+			border-radius: 10px;
+            transition: transform 0.2s ease-in-out;
+            max-height: 400px;
+            max-width: 800px;
+            color: black;
+        }
+        th, td {
+            border: 2px solid black;
+            padding: 8px;
+            white-space: nowrap;
+        }
+        th {
+            background-color: black;
+            color:  #C1FF72;
+			text-align: center;
+			border-radius: 0px;
+			text-size: 25px;
+        }
+        a {
+            color: black;
+            text-decoration: none;
+        }
+        a:hover {
+            color: darkgreen;
+        }
+  </style>
+</head>
+<body>
+  <div class="top-bar">
+    <button class="btn" onclick="showPage('home-page')"><i class="fa fa-home"></i></button>
+    <button class="btn" onclick="showPage('page1')">1</button>
+    <button class="btn" onclick="showPage('page2')">2</button>
+    <button class="btn" onclick="showPage('page3')">3</button>
+	 <button class="btn" onclick="showPage('page4')">4</button>
+
+  </div>
+
+  <div id="home-page" class="page active">
+    
+
+	<div class="head-box">
+     
+    </div>
+  </div>
+
+
+
+  <div id="page1" class="page">
+  
+    <div class="slideshow-container">
+	
+	
+	  
+      <div class="mySlides">
+        <img src=".jpg"></img>
+      </div>
+	
+       <div class="mySlides"> 
+        <img src="new1.png"></img>
+		  </div>
+		  
+      <div class="mySlides">
+        <img src="new2.png"></img>
+      </div>
+	  
+      <div class="mySlides">
+        <img src="3.png"></img>
+      </div>
+	  
+	    
+      <div class="mySlides">
+        <img src="4.png"></img>
+      </div>
+	  
+	  
+	  
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </div>
+  
+  <div id="page2" class="page">
+  
+  <div class="container">
+        <table>
+            <tr>
+                <th colspan="2">WEBSITE</th>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td>Christoph Stoll</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Climate Connect</td>
+            </tr>
+            <tr>
+                <td>Date Created</td>
+                <td>July 2020</td>
+            </tr>
+            <tr>
+                <td>Date Accessed</td>
+                <td>13 March 2024</td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><a href="https://climateconnect.com">Climate solutions in the transportation sector | Climate Connect</a></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">VIDEO</th>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td>Architect 24x7</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Green Transportation</td>
+            </tr>
+            <tr>
+                <td>Date Created</td>
+                <td>2018/09/04</td>
+            </tr>
+            <tr>
+                <td>Date Accessed</td>
+                <td>13 March 2024</td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><a href="https://youtu.be/2M8FZiKQ798?si=8B_-lUNTKXZ9lDAM">https://youtu.be/2M8FZiKQ798?si=8B_-lUNTKXZ9lDAM</a></td>
+            </tr>
+        </table>
+
+        <table>
+            <tr>
+                <th colspan="2">BLOG</th>
+            </tr>
+            <tr>
+                <td>Author</td>
+                <td>Fiona Howarth</td>
+            </tr>
+            <tr>
+                <td>Name</td>
+                <td>Octopus EV</td>
+            </tr>
+            <tr>
+                <td>Date Created</td>
+                <td>Dec 20, 2022</td>
+            </tr>
+            <tr>
+                <td>Date Accessed</td>
+                <td>13 March 2024</td>
+            </tr>
+            <tr>
+                <td>URL</td>
+                <td><a href="https://octopusev.com">Why is sustainable transportation important? | Octopus EV</a></td>
+            </tr>
+        </table>
+
+    </div>
+  </div>
+  
+    <div id="page3" class="page">
+	      <table>
+            <tr>
+                <th>NR</th>
+                <th>VRAAG</th>
+                <th>VLAK (1-4)</th>
+                <th>KATEGORIE</th>
+                <th>URL</th>
+                <th>TIPE BRON</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Wat kan ons doen om groen Vervoer beplanning te verbeter in Suid-Afrika?</td>
+                <td>1</td>
+                <td>Gevolge</td>
+                <td><a href="https://climateconnect.com">Climate solutions in the transportation sector | Climate Connect</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Wat is die beste oplossings vir volhoubare vervoer?</td>
+                <td>1</td>
+                <td>Agtergrond</td>
+                <td><a href="https://www.energy.gov">Sustainable Transportation and Fuels | Department of Energy</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Hoe kan ons vervoer meer volhoubaar maak?</td>
+                <td>1</td>
+                <td>Oplossing</td>
+                <td><a href="https://www.ptvgroup.com">How can we make transport more sustainable | PTV Blog</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Wat is die omgewingsimpak van vervoer?</td>
+                <td>1</td>
+                <td>Agtergrond</td>
+                <td><a href="https://octopusev.com">Why is sustainable transportation important? | Octopus EV</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>Hoe groen vervoer kan 'n katalisator vir ekonomiese ontwikkeling en groei wees?</td>
+                <td>2</td>
+                <td>Oplossing</td>
+                <td><a href="https://www.dbsa.org">Green transport: A catalyst for economic development | DBSA</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>Hoe lyk die toekoms van groen vervoer beplanning?</td>
+                <td>2</td>
+                <td>Agtergrond</td>
+                <td><a href="https://youtu.be/2M8FZiKQ798?si=8B_-lUNTKXZ9lDAM">https://youtu.be/2M8FZiKQ798?si=8B_-lUNTKXZ9lDAM</a></td>
+                <td>Video</td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>Hoe kan jy jou vervoer meer omgewingsvriendelik maak?</td>
+                <td>2</td>
+                <td>Oplossing</td>
+                <td><a href="https://ecobnb.com">5 Ways To Make Your Commute More Eco-Friendly - Ecobnb</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>Waarom is volhoubare vervoer belangrik?</td>
+                <td>3</td>
+                <td>Probleem</td>
+                <td><a href="https://octopusev.com">Why is sustainable transportation important? | Octopus EV</a></td>
+                <td>blog</td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td>Wat kan besighede doen om volhoubare vervoer te ondersteun?</td>
+                <td>3</td>
+                <td>Agtergrond</td>
+                <td><a href="https://octopusev.com">Why is sustainable transportation important? | Octopus EV</a></td>
+                <td>webtuiste</td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td>Sou dit beter wees om vervoer eko-vriendelik te maak?</td>
+                <td>4</td>
+                <td>Gevolge</td>
+                <td><a href="https://joloda.com">A Guide to Achieving Sustainable Transportation | Joloda Hydraroll</a></td>
+                <td>webtuiste</td>
+            </tr>
+        </table>
+    </div>
+	
+	</div>
+
+  <script>
+    function showPage(pageId) {
+      var pages = document.getElementsByClassName('page');
+      for (var i = 0; i < pages.length; i++) {
+        pages[i].classList.remove('active');
+      }
+      document.getElementById(pageId).classList.add('active');
+    }
+
+
+  let slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slides[slideIndex - 1].style.display = "block";
+  }
+  </script>
+</body>
+</html>
